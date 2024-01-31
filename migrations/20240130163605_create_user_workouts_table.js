@@ -20,23 +20,23 @@ exports.up = function (knex) {
       table.increments("id").primary();
       table.string("date").notNullable();
       table.string("exercise1_name").notNullable();
-      table.string("reps").notNullable();
-      table.string("load").notNullable();
+      table.string("exercise1_reps").notNullable();
+      table.string("exercise1_load").notNullable();
       table.string("exercise2_name").notNullable();
-      table.string("reps").notNullable();
-      table.string("load").notNullable();
+      table.string("exercise2_reps").notNullable();
+      table.string("exercise2_load").notNullable();
       table.string("exercise3_name").notNullable();
-      table.string("reps").notNullable();
-      table.string("load").notNullable();
+      table.string("exercise3_reps").notNullable();
+      table.string("exercise3_load").notNullable();
       table.string("exercise4_name").notNullable();
-      table.string("reps").notNullable();
-      table.string("load").notNullable();
+      table.string("exercise4_reps").notNullable();
+      table.string("exercise4_load").notNullable();
       table.string("exercise5_name").notNullable();
-      table.string("reps").notNullable();
-      table.string("load").notNullable();
+      table.string("exercise5_reps").notNullable();
+      table.string("exercise5_load").notNullable();
       table.string("exercise6_name").notNullable();
-      table.string("reps").notNullable();
-      table.string("load").notNullable();
+      table.string("exercise6_reps").notNullable();
+      table.string("exercise6_load").notNullable();
       table.integer("likes").notNullable().defaultTo(0);
       table
         .integer("user_id")
