@@ -11,6 +11,7 @@ exports.up = function (knex) {
       table.string("date_of_birth").notNullable();
       table.string("phone_number").notNullable();
       table.string("email").notNullable();
+      table.string("password").notNullable();
       table.timestamp("created_at").defaultTo(knex.fn.now());
       table
         .timestamp("updated_at")
@@ -58,7 +59,3 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   return knex.schema.dropTable("workouts").dropTable("user");
 };
-
-knex.schema.alterTable("user", function (table) {
-  table.string("password").notNullable();
-});
