@@ -1,7 +1,7 @@
 const knex = require("knex")(require("../knexfile"));
 const router = require("express").Router();
 
-router.get("/", async (_req, res) => {
+router.get("/users/:id/workouts", async (_req, res) => {
   try {
     const data = await knex("workouts");
     res.status(200).json(data);

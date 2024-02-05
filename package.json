@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch index.js",
+    "start": "nodemon index.js",
     "migrate": "knex migrate:latest",
     "migrate:down": "knex migrate:down",
     "migrate:rollback": "knex migrate:rollback",
@@ -14,9 +14,13 @@
   "author": "Onome Ogwuda",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "knex": "^3.1.0",
     "mysql2": "^3.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }

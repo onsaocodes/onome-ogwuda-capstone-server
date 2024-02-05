@@ -58,3 +58,7 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   return knex.schema.dropTable("workouts").dropTable("user");
 };
+
+knex.schema.alterTable("user", function (table) {
+  table.string("password").notNullable();
+});

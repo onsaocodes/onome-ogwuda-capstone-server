@@ -1,15 +1,19 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+require("dotenv").config();
+const PORT = process.env.PORT || 5050;
+const cors = require("cors");
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+const userRoutes = require("./routes/user-routes");
+app.use(cors());
+
+app.use("/users", userRoutes);
+app.use("/workouts", userRoutes);
 
 app.post("/signup", (req, res) => {
   res.status(404).send("Successfully added new user");
 });
 
-app.listen(port, () => {
-  console.log(`Habitrack app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Habitrack app listening on port ${PORT}`);
 });
